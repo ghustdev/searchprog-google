@@ -1,0 +1,219 @@
+/* Reset e Configurações Globais */
+:root {
+  --background-color: #121212;
+  --text-color: #e0e0e0;
+  --primary-color: #bb86fc;
+  --primary-variant-color: #3700b3;
+  --card-background: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(255, 255, 255, 0.1);
+  --font-family: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+/* Animação de fundo */
+#canvas3d {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+/* Conteúdo Principal */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  z-index: 1;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+/* Barra de Busca */
+.container-input {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+}
+
+#input {
+  flex-grow: 1;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  background-color: var(--card-background);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  color: var(--text-color);
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#input::placeholder {
+  color: rgba(224, 224, 224, 0.5);
+}
+
+#input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(187, 134, 252, 0.2);
+}
+
+#button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: var(--primary-color);
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#button:hover {
+  background-color: #a050f0;
+}
+
+/* Container de Tags de Tópicos */
+#topic-tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+}
+
+.topic-tag {
+  /* Reset de estilos de botão */
+  border: 1px solid var(--card-border);
+  background-color: var(--card-background);
+  color: var(--text-color);
+  font-family: var(--font-family);
+
+  /* Estilo da tag */
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.topic-tag:hover, .topic-tag.active {
+  background-color: var(--primary-color);
+  color: #000;
+  transform: scale(1.05);
+}
+
+.topic-tag:focus-visible {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(187, 134, 252, 0.2);
+}
+
+.topic-tag.active:hover {
+  transform: scale(1.05); /* Mantém o scale no hover mesmo quando ativo */
+}
+
+/* Container dos Resultados */
+#results-container {
+  display: grid;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.track-card {
+  background: var(--card-background);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  text-align: left;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.track-card.hidden {
+  display: none;
+}
+
+.track-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.track-card h2 {
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.track-card p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.track-card .related-tech {  
+  margin-top: 1rem;
+}
+
+.track-card .related-tech strong {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  width: 100%;
+  z-index: 1;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+footer a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s, text-shadow 0.3s;
+  opacity: 0.7;
+}
+
+footer a:hover {
+  color: var(--primary-color);
+  text-shadow: 0 0 5px var(--primary-color);
+  opacity: 1;
+}

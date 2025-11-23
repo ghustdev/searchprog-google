@@ -1,17 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Base de Conhecimento</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dev Google Alura - Base de Conhecimento</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -20,44 +17,40 @@
   <main>
     <div class="content-wrapper">
       <header>
-        <h1 class="title">Base de Conhecimento</h1>
+        <h1 class="title">Explore o Universo da Tecnologia</h1>
       </header>
 
       <div class="container-input">
-        <input type="text" id="input" placeholder="Digite uma linguagem de programação...">
+        <input type="text" id="input" placeholder="Busque por tecnologias, frameworks, linguagens..." />
         <button id="button">Buscar</button>
       </div>
-    </div>
-    <div class="chat-container">
-      <div class="chat-header">
-        <h2>Assistente Virtual</h2>
+
+      <!-- Container para as tags de tópicos -->
+      <div id="topic-tags-container">
+        <button class="topic-tag active">Todos</button>
+        <button class="topic-tag">Frontend</button>
+        <button class="topic-tag">Backend</button>
+        <button class="topic-tag">Ferramentas</button>
+        <button class="topic-tag">Carreira</button>
       </div>
-      <div class="chat-messages" id="chat-messages">
-        <!-- Mensagens do chat aparecerão aqui -->
-        <div class="message assistant">Olá! Como posso ajudar você hoje?</div>
-      </div>
-      <div class="chat-input-area">
-        <input type="text" id="chat-input" placeholder="Pergunte algo...">
-        <button id="send-button" aria-label="Enviar mensagem">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
-          </svg>
-        </button>
+
+      <!-- Container para os resultados da busca -->
+      <div id="results-container">
+        <!-- Os cards de conhecimento serão inseridos aqui pelo JavaScript -->
       </div>
     </div>
   </main>
 
   <footer>
     <ul>
-      <li><a href="https://www.linkedin.com/in/gustavo-cardosoc-costa/" target="_blank"
-          rel="noopener noreferrer">LinkedIn</a></li>
-      <li><a href="https://github.com/gustavocardoso" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+      <li><a href="#">Sobre</a></li>
+      <li><a href="#">Projetos</a></li>
+      <li><a href="#">Contato</a></li>
     </ul>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.94/build/spline-viewer.js"></script>
-  <script type="module" src="script/main.js"></script>
+  <script type="module" src="https://unpkg.com/@splinetool/runtime@1.9.0/build/runtime.js"></script>
+  <script type="module" src="main.js"></script>
 </body>
 
 </html>
