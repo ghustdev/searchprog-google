@@ -20,12 +20,232 @@
         <h1 class="title">Explore o Universo da Tecnologia</h1>
       </header>
 
+      <!-- =================== -->
+      <!-- MÓDULO DE PESQUISA -->
+      <!-- =================== -->
       <div class="container-input">
         <input type="text" id="input" placeholder="Busque por tecnologias, frameworks, linguagens..." />
         <button id="button">Buscar</button>
       </div>
 
-      <!-- Container para as tags de tópicos -->
+      <!-- ============================ -->
+      <!-- SECTION: LINGUAGENS & TECHS -->
+      <!-- ============================ -->
+      <section id="technologies-list-section">
+        <h2 class="subtitle">Linguagens e Tecnologias Cadastradas</h2>
+        <ul id="technologies-list">
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Python</li>
+          <li>Node.js</li>
+          <li>HTML & CSS</li>
+          <li>Vue.js</li>
+          <li>Inteligência Artificial (IA)</li>
+          <li>API (Application Programming Interface)</li>
+          <li>Docker</li>
+          <li>SQL (Structured Query Language)</li>
+        </ul>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- SECTION PRINCIPAL: CARDS DAS TECNOLOGIAS    -->
+      <!-- ============================================ -->
+      <section id="knowledge-cards-section">
+        <h2 class="subtitle">Todas as Tecnologias e Linguagens</h2>
+        <div class="knowledge-cards-container">
+          <!-- Card JavaScript -->
+          <div class="tech-card">
+            <h3>JavaScript</h3>
+            <p class="mean">JavaScript é uma linguagem de programação de alto nível, mais conhecida por seu uso em
+              páginas web para criar interatividade. Hoje, também é amplamente utilizada no backend com Node.js, em
+              aplicativos móveis e desktop.</p>
+            <ul class="related"><strong>Linguagens/Tecnologias Relacionadas:</strong> HTML, CSS, React, Angular, Vue.js,
+              Node.js, Express.js</ul>
+            <div class="best-practices">
+              <strong>Boas práticas:</strong>
+              <ul>
+                <li>Use sempre <code>let</code> ou <code>const</code> no lugar de <code>var</code>;</li>
+                <li>Prefira arrow functions quando possível;</li>
+                <li>Evite variáveis globais;</li>
+                <li>Comente apenas o necessário, escreva código legível;</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card React -->
+          <div class="tech-card">
+            <h3>React</h3>
+            <p class="mean">React é uma biblioteca JavaScript de código aberto para construir interfaces de usuário
+              (UI), especialmente para aplicações de página única (SPA). É baseado em componentes e mantido pelo
+              Facebook.</p>
+            <ul class="related"><strong>Linguagens/Tecnologias Relacionadas:</strong> JavaScript, JSX, Node.js, Redux,
+              React Router, Next.js</ul>
+            <div class="best-practices">
+              <strong>Boas práticas:</strong>
+              <ul>
+                <li>Divida em componentes reutilizáveis pequenos;</li>
+                <li>Evite estados globais desnecessários;</li>
+                <li>Utilize chaves únicas em listas;</li>
+                <li>Mantenha o código dos efeitos (<code>useEffect</code>) limpo;</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card Python -->
+          <div class="tech-card">
+            <h3>Python</h3>
+            <p class="mean">Python é uma linguagem de programação de alto nível, interpretada, com uma sintaxe simples e
+              legível. É extremamente versátil, usada em desenvolvimento web, ciência de dados, inteligência artificial,
+              automação e mais.</p>
+            <ul class="related"><strong>Linguagens/Tecnologias Relacionadas:</strong> Django, Flask, Pandas, NumPy,
+              TensorFlow, PyTorch</ul>
+            <div class="best-practices">
+              <strong>Boas práticas:</strong>
+              <ul>
+                <li>Siga a PEP8 para formatação e nomes de variáveis;</li>
+                <li>Códigos e funções sempre bem documentados;</li>
+                <li>Prefira listas por compreensões;</li>
+                <li>Utilize virtualenv para ambientes isolados;</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card Node.js -->
+          <div class="tech-card">
+            <h3>Node.js</h3>
+            <p class="mean">Node.js é um ambiente de execução JavaScript que permite executar código JavaScript no lado
+              do servidor. É ideal para construir APIs rápidas e escaláveis, microsserviços e aplicações em tempo real.
+            </p>
+            <ul class="related"><strong>Linguagens/Tecnologias Relacionadas:</strong> JavaScript, Express.js, NestJS,
+              MongoDB, PostgreSQL</ul>
+            <div class="best-practices">
+              <strong>Boas práticas:</strong>
+              <ul>
+                <li>Use Promises e async/await;</li>
+                <li>Mantenha rotas organizadas em módulos;</li>
+                <li>Trate erros de forma centralizada;</li>
+                <li>Evite funções bloqueantes no servidor;</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card HTML & CSS -->
+          <div class="tech-card">
+            <h3>HTML & CSS</h3>
+            <p class="mean">HTML (HyperText Markup Language) é a linguagem de marcação padrão para criar páginas web,
+              definindo sua estrutura. CSS (Cascading Style Sheets) é usado para estilizar e dar aparência às páginas
+              web, controlando cores, fontes e layout.</p>
+            <ul class="related"><strong>Linguagens/Tecnologias Relacionadas:</strong> JavaScript, Sass, Bootstrap,
+              Tailwind CSS</ul>
+            <div class="best-practices">
+              <strong>Boas práticas:</strong>
+              <ul>
+                <li>Mantenha uma hierarquia clara de heading/semântica;</li>
+                <li>Use classes de CSS com nomes descritivos;</li>
+                <li>Evite estilos inline;</li>
+                <li>Centralize variáveis de cor no CSS;</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card Vue.js -->
+          <div class="tech-card">
+            <h3>Vue.js</h3>
+            <p class="mean">Vue.js é um framework JavaScript progressivo para construir interfaces de usuário. É
+              conhecido por sua curva de aprendizado suave, flexibilidade e excelente documentação.</p>
+            <ul class="related"><strong>Linguagens/Tecnologias Relacionadas:</strong> JavaScript, Vuex, Pinia, Vue
+              Router, Nuxt.js</ul>
+            <div class="best-practices">
+              <strong>Boas práticas:</strong>
+              <ul>
+                <li>Separe template, script e style nos arquivos .vue;</li>
+                <li>Utilize o sistema de diretivas do Vue;</li>
+                <li>Mantenha componentes pequenos e focados;</li>
+                <li>Siga convenções de nomes e diretórios;</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card IA -->
+          <div class="tech-card">
+            <h3>Inteligência Artificial (IA)</h3>
+            <p class="mean">Inteligência Artificial é um campo da ciência da computação dedicado a criar sistemas
+              capazes de realizar tarefas que normalmente exigem inteligência humana, como aprendizado, raciocínio e
+              percepção.</p>
+            <ul class="related"><strong>Linguagens/Tecnologias Relacionadas:</strong> Python, R, TensorFlow, PyTorch,
+              Scikit-learn, Redes Neurais</ul>
+            <div class="best-practices">
+              <strong>Boas práticas:</strong>
+              <ul>
+                <li>Garanta qualidade dos dados usados;</li>
+                <li>Documente as hipóteses do modelo;</li>
+                <li>Monitore vieses nos dados;</li>
+                <li>Utilize experimentação para refinar modelos;</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card API -->
+          <div class="tech-card">
+            <h3>API (Application Programming Interface)</h3>
+            <p class="mean">Uma API é um conjunto de regras e definições que permite que diferentes aplicações de
+              software se comuniquem. Ela atua como ponte para que um sistema acesse funcionalidades ou dados de outro
+              de forma controlada.</p>
+            <ul class="related"><strong>Linguagens/Tecnologias Relacionadas:</strong> REST, GraphQL, gRPC, JSON, HTTP,
+              Node.js, Python</ul>
+            <div class="best-practices">
+              <strong>Boas práticas:</strong>
+              <ul>
+                <li>Documente todas as rotas e parâmetros;</li>
+                <li>Use versionamento nas APIs;</li>
+                <li>Evite retornar dados desnecessários;</li>
+                <li>Utilize autenticação adequada;</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card Docker -->
+          <div class="tech-card">
+            <h3>Docker</h3>
+            <p class="mean">Docker é uma plataforma de código aberto que automatiza a implantação de aplicações dentro
+              de contêineres de software. Contêineres empacotam o código e todas as dependências, garantindo que a
+              aplicação funcione de forma consistente em qualquer ambiente.</p>
+            <ul class="related"><strong>Linguagens/Tecnologias Relacionadas:</strong> Kubernetes, Linux, YAML, CI/CD, Go
+            </ul>
+            <div class="best-practices">
+              <strong>Boas práticas:</strong>
+              <ul>
+                <li>Mantenha as imagens leves e seguras;</li>
+                <li>Use arquivos <code>.dockerignore</code>;</li>
+                <li>Utilize variáveis de ambiente;</li>
+                <li>Faça versionamento das imagens;</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Card SQL -->
+          <div class="tech-card">
+            <h3>SQL (Structured Query Language)</h3>
+            <p class="mean">SQL é uma linguagem de programação padrão usada para gerenciar e manipular bancos de dados
+              relacionais. Com ela, é possível criar, consultar, atualizar e deletar dados.</p>
+            <ul class="related"><strong>Linguagens/Tecnologias Relacionadas:</strong> PostgreSQL, MySQL, SQL Server,
+              Oracle, SQLite</ul>
+            <div class="best-practices">
+              <strong>Boas práticas:</strong>
+              <ul>
+                <li>Sempre use parâmetros para evitar SQL Injection;</li>
+                <li>Nomeie tabelas e colunas com clareza;</li>
+                <li>Evite SELECT * em produção;</li>
+                <li>Utilize índices estrategicamente;</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================== -->
+      <!-- TAGS DE TÓPICOS PARA FILTRO -->
+      <!-- =================== -->
       <div id="topic-tags-container">
         <button class="topic-tag active">Todos</button>
         <button class="topic-tag">Frontend</button>
@@ -34,7 +254,9 @@
         <button class="topic-tag">Carreira</button>
       </div>
 
-      <!-- Container para os resultados da busca -->
+      <!-- =================== -->
+      <!-- RESULTADOS DA PESQUISA -->
+      <!-- =================== -->
       <div id="results-container">
         <!-- Os cards de conhecimento serão inseridos aqui pelo JavaScript -->
       </div>

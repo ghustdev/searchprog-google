@@ -58,23 +58,31 @@ header {
   letter-spacing: -1px;
 }
 
-/* Barra de Busca */
+/* =================== */
+/* MÓDULO DE PESQUISA  */
+/* =================== */
 .container-input {
   display: flex;
   gap: 0.5rem;
   margin-bottom: 3rem;
+  box-shadow: 0 2px 16px 0 rgba(187, 134, 252, 0.10);
+  border-radius: 12px;
+  background: rgba(34, 34, 50, 0.29);
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--primary-color);
 }
 
 #input {
   flex-grow: 1;
   padding: 0.75rem 1rem;
-  font-size: 1rem;
+  font-size: 1.08rem;
   background-color: var(--card-background);
-  border: 1px solid var(--card-border);
+  border: 1.5px solid var(--primary-color);
   border-radius: 8px;
   color: var(--text-color);
   outline: none;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 5px 0 rgba(187, 134, 252, 0.13);
 }
 
 #input::placeholder {
@@ -82,24 +90,26 @@ header {
 }
 
 #input:focus {
-  border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(187, 134, 252, 0.2);
+  border-color: var(--primary-variant-color);
+  box-shadow: 0 0 0 3px rgba(55, 0, 179, 0.21);
 }
 
 #button {
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1.6rem;
   font-size: 1rem;
-  font-weight: 500;
-  background-color: var(--primary-color);
-  color: #000;
+  font-weight: 600;
+  background: linear-gradient(90deg,var(--primary-color), var(--primary-variant-color));
+  color: #fff;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  box-shadow: 0 1px 6px 0 rgba(187,134,252,0.16);
+  transition: background 0.2s, transform 0.2s;
 }
 
 #button:hover {
-  background-color: #a050f0;
+  background: linear-gradient(90deg, #a050f0, #3700b3);
+  transform: scale(1.06);
 }
 
 /* Container de Tags de Tópicos */
@@ -216,4 +226,137 @@ footer a:hover {
   color: var(--primary-color);
   text-shadow: 0 0 5px var(--primary-color);
   opacity: 1;
+}
+
+/* ============================= */
+/* SECTION: LINGUAGENS/TECH LIST */
+/* ============================= */
+#technologies-list-section {
+  background: var(--card-background);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  margin: 2rem auto 2rem auto;
+  padding: 2rem 1rem 1.5rem 1rem;
+  max-width: 650px;
+  box-shadow: 0 4px 18px 0 rgba(187,134,252,.09);
+}
+
+#technologies-list-section .subtitle {
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1.3rem;
+  text-align: left;
+  letter-spacing: -.5px;
+}
+
+#technologies-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem 2rem;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-start;
+}
+
+#technologies-list li {
+  padding: 0.5rem 1rem;
+  background: rgba(187,134,252,0.11);
+  border-radius: 7px;
+  color: var(--text-color);
+  border-left: 4px solid var(--primary-color);
+  font-size: 1.08rem;
+  margin-bottom: 0.4rem;
+  transition: background 0.12s;
+  font-weight: 500;
+}
+
+#technologies-list li:hover {
+  background: rgba(187,134,252,0.19);
+}
+
+/* ============================== */
+/* CARDS DAS TECNOLOGIAS MAIN     */
+/* ============================== */
+#knowledge-cards-section {
+  margin: 2.5rem auto 3rem auto;
+  max-width: 1200px;
+  padding: 1rem;
+  background: transparent;
+}
+
+.knowledge-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 2.1rem 1.3rem;
+  margin-top: 1.2rem;
+}
+
+.tech-card {
+  background: var(--card-background);
+  border: 1.5px solid var(--primary-color);
+  border-radius: 16px;
+  padding: 2rem 1.2rem 1.3rem 1.2rem;
+  box-shadow: 0 3px 16px 0 rgba(187,134,252,0.10);
+  transition: box-shadow 0.28s, border 0.18s;
+  display: flex;
+  flex-direction: column;
+  min-height: 350px;
+  justify-content: space-between;
+}
+
+.tech-card:hover {
+  box-shadow: 0 7px 34px 0 rgba(187,134,252,0.19);
+  border-color: var(--primary-variant-color);
+}
+
+.tech-card h3 {
+  color: var(--primary-color);
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 0.85rem;
+}
+.tech-card .mean {
+  color: var(--text-color);
+  font-size: 1.07rem;
+  margin-bottom: 0.75rem;
+}
+.tech-card .related {
+  font-size: 1.01rem;
+  margin-bottom: 0.65rem;
+  color: #aba3ea;
+  padding-left: 0;
+  list-style: none;
+}
+.tech-card .related strong {
+  color: var(--primary-variant-color);
+}
+.tech-card .best-practices {
+  margin-top: 0.4rem;
+  background: rgba(187,134,252,0.07);
+  padding: 0.5rem 0.8rem 0.6rem 0.8rem;
+  border-radius: 7px;
+}
+.tech-card .best-practices strong {
+  color: var(--primary-color);
+  display: block;
+  margin-bottom: 0.3rem;
+}
+.tech-card .best-practices ul {
+  padding-left: 1.12rem;
+  margin: 0;
+}
+.tech-card .best-practices li {
+  margin-bottom: 0.22rem;
+  font-size: 0.99rem;
+  color: var(--text-color);
+}
+@media (max-width: 768px) {
+  .knowledge-cards-container {
+    grid-template-columns: 1fr;
+  }
+  .tech-card {
+    padding: 1.3rem 0.6rem;
+  }
 }
